@@ -76,15 +76,50 @@ body, button {
     height: auto;
 }
 
+#artist-info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 0.3rem;
+    z-index: 99;
+}
+
+#artistContainer {
+    height: 9rem;
+}
+
+#artistImg {
+    width: 150px;
+    height: 150px;
+}
+
+#moreInfo span, #artistContainer span {
+    margin-right: 1rem;
+}
+
+#moreArtists span {
+    margin-right: 0.5rem;
+}
+
 #song-info {
     position: absolute;
     bottom: 3rem;
     left: 3rem;
 }
 
-#song-info span {
+#song-info span, #artist-info span {
     float: left;
     vertical-align: middle;
+}
+
+#artist-info button {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
 }
 
 #name, #artist {
@@ -101,6 +136,10 @@ body, button {
 
 #artist {
     font-size: 1rem;
+}
+
+#artistName {
+    font-size: 2rem;
 }
 
 #togglePlay {
@@ -129,6 +168,12 @@ body, button {
     width: 200px;
     height: 200px;
     background-color: rgb(86, 108, 116);
+}
+
+.boldInfo {
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 2rem;
 }
 
 .hide {
