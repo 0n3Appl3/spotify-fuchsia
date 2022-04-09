@@ -55,10 +55,6 @@ body, button {
     100% { transform: scale(1.2); }
 }
 
-/* #scale:hover {
-    transform: scale(1.4);
-} */
-
 #visualiser {
     position: absolute;
     bottom: 16rem;
@@ -80,16 +76,17 @@ body, button {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(1);
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     padding: 1.5rem;
     border-radius: 0.3rem;
     z-index: 99;
+    transition: ease-in-out 0.5s;
 }
 
-#artistContainer {
-    height: 9rem;
+#artistContainer, #moreInfo, #moreArtists {
+    clear: both;
 }
 
 #artistImg {
@@ -97,12 +94,38 @@ body, button {
     height: 150px;
 }
 
-#moreInfo span, #artistContainer span {
+#moreInfo span {
     margin-right: 1rem;
+    margin-bottom: 1rem;
 }
 
-#moreArtists span {
-    margin-right: 0.5rem;
+#artistContainer img, #artistContainer p {
+    vertical-align: middle;
+}
+
+#artistContainer p {
+    padding-left: 1.2rem;
+    display: inline-block;
+}
+
+#moreArtists div {
+    overflow: hidden;
+    clear: both;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 0.3rem;
+    margin-top: 0.5rem;
+}
+
+#moreArtists div > img {
+    vertical-align: middle;
+}
+
+#moreArtists div > p {
+    display: inline-block;
+    vertical-align: middle;
+    overflow: hidden;
+    padding-left: 1.2rem;
+    color: #ccc;
 }
 
 #song-info {
@@ -176,7 +199,21 @@ body, button {
     font-size: 2rem;
 }
 
+.grey {
+    color: #ccc;
+}
+
 .hide {
     transform: scale(0.9);
+    opacity: 0;
+}
+
+.hide-2 {
+    transform: translate(-50%, 100%) !important;
+    opacity: 0;
+}
+
+.hide-3 {
+    transform: translate(-50%, -50%) scale(0.9) !important;
     opacity: 0;
 }
