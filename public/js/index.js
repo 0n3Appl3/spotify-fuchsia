@@ -1,4 +1,5 @@
 let playbackButton = document.getElementById("togglePlay");
+let artistInfoPanel = document.getElementById("artist-info");
 let timeout;
 
 window.addEventListener("load", function() {
@@ -15,7 +16,7 @@ window.addEventListener("mousemove", function() {
 
 function getArtist(id) {
     let container = document.getElementById("artist-info");
-    container.className = "hide-3";
+    //container.className = "hide-3";
     setTimeout(() => {
         $.ajax({
             url: "https://api.spotify.com/v1/artists/" + id,
@@ -50,7 +51,7 @@ function getArtist(id) {
                 getRelatedArtists(id);
             }
         });
-    }, 400);
+    }, 380);
 }
 
 function getRelatedArtists(id) {
@@ -70,6 +71,7 @@ function getRelatedArtists(id) {
                 let name = document.createElement("p");
 
                 cont.onclick = function() {
+                    artistInfoPanel.className = "hide-3";
                     getArtist(artist.id);
                 }
                 image.src = artist.images[0].url;

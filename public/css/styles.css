@@ -114,6 +114,17 @@ body, button {
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 0.3rem;
     margin-top: 0.5rem;
+    transition: ease-in-out 0.3s;
+}
+
+#moreArtists div:hover {
+    background-color: rgba(255, 255, 255, 0.489);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+}
+
+#moreArtists div:hover > p {
+    color: #2f2f2f;
 }
 
 #moreArtists div > img {
@@ -126,6 +137,7 @@ body, button {
     overflow: hidden;
     padding-left: 1.2rem;
     color: #ccc;
+    transition: ease-in-out 0.3s;
 }
 
 #song-info {
@@ -161,8 +173,33 @@ body, button {
     font-size: 1rem;
 }
 
+#artist span {
+    transition: ease-in-out 0.3s;
+    margin-right: 0.5rem;
+    border-bottom: 2px rgba(255, 255, 255, 0) solid;
+}
+
+#artist span:hover {
+    border-bottom: 2px white solid;
+    cursor: pointer;
+}
+
 #artistName {
     font-size: 2rem;
+}
+
+#exitArtist {
+    border: none;
+    text-decoration: none;
+    font-size: 1rem;
+    color: white;
+    background-color: rgba(255, 255, 255, 0);
+    transition: ease-in-out 0.25s;
+}
+
+#exitArtist:hover {
+    color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
 }
 
 #togglePlay {
