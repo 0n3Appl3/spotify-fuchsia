@@ -7,10 +7,18 @@ body {
     overflow: hidden;
     -ms-overflow-style: none;
     scrollbar-width: none !important;
+    height: 100%;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
 }
 
 body, button {
     font-family: 'Poppins', sans-serif;
+}
+
+body, #background, .placeholder {
+    background: rgb(181,29,169);
+    background: linear-gradient(to bottom right, rgba(181,29,169,1) 0%, rgba(226,101,150,1) 32%, rgba(231,163,91,1) 100%);
 }
 
 ::-webkit-scrollbar {
@@ -253,4 +261,51 @@ body, button {
 .hide-3 {
     transform: translate(-50%, -50%) scale(0.9) !important;
     opacity: 0;
+}
+
+/*
+ * Login Page (before authorisation)
+ */
+.text {
+    padding-bottom: 4rem;
+}
+
+#login {
+    padding-top: 5rem;
+    text-align: center;
+}
+
+#login h1 {
+    color: #eee;
+    font-size: 5rem;
+    margin-top: 0rem;
+    margin-bottom: 1rem;
+}
+
+#login p {
+    color: #eee;
+}
+
+#login a {
+    text-decoration: none;
+    color: #eee;
+    background-color: rgb(181,29,169);
+    padding: 1rem 2rem;
+    border-radius: 0.3rem;
+    transition: ease-in-out 0.25s;
+}
+
+#login a:hover {
+    color: black;
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+}
+
+#login img {
+    display: block;
+    max-width: 900px;
+    padding: 2rem;
+    padding-top: 5rem;
+    margin: auto;
 }
